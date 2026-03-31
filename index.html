@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>WINFIT Klang | Win Fitness Factory — The Elite Standard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@300;400;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --equipment-red: #d2122e;
+      --gold-gradient: linear-gradient(135deg, #c5a059 0%, #f1e0b5 50%, #c5a059 100%);
+      --matte-gold: #c5a059;
+      --wall-white: #ffffff;
+      --ceiling-black: #0a0a0a;
+      --text-main: #1a1a1a;
+      --maxw: 1300px;
+    }
+
+    * { box-sizing: border-box; transition: all 0.3s ease; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background-color: var(--wall-white);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      color: var(--text-main);
+      overflow-x: hidden;
+    }
+
+    /* --- NAVIGATION --- */
+    header {
+      padding: 15px 0;
+      background: var(--ceiling-black);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 2px solid var(--matte-gold);
+    }
+    .nav-container {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 25px;
+    }
+    .logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      background: var(--gold-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+
+    /* --- HAMBURGER LOGIC --- */
+    #menu-toggle { display: none; }
+    
+    .hamburger {
+      display: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+      z-index: 1100;
+    }
+    .hamburger span {
+      display: block;
+      width: 25px;
+      height: 2px;
+      background: var(--matte-gold);
+    }
+
+    nav { display: flex; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-left: 30px;
+    }
+    nav a:hover { color: var(--matte-gold); }
+
+    /* --- HERO SECTION --- */
+    .hero {
+      min-height: 80vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background: var(--ceiling-black);
+      color: white;
+      position: relative;
+    }
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 60px 10%;
+      z-index: 2;
+    }
+    .hero-text h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(45px, 8vw, 90px);
+      line-height: 1;
+      margin: 0;
+      text-transform: uppercase;
+    }
+    .hero-text h1 span {
+      display: block;
+      color: var(--equipment-red);
+      font-style: italic;
+    }
+    .hero-image {
+      background: linear-gradient(to right, var(--ceiling-black) 0%, transparent 100%),
+                  url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* --- FEATURES --- */
+    .features { padding: 80px 20px; }
+    .section-title {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(32px, 5vw, 42px);
+      margin-bottom: 50px;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      max-width: var(--maxw);
+      margin: 0 auto;
+      gap: 25px;
+    }
+    .feature-card {
+      padding: 50px 30px;
+      background: #f9f9f9;
+      border-top: 4px solid var(--ceiling-black);
+      position: relative;
+    }
+    .feature-card:hover {
+      background: var(--ceiling-black);
+      color: white;
+      transform: translateY(-8px);
+      border-top-color: var(--equipment-red);
+    }
+
+    /* --- LOCATION --- */
+    .location-section {
+      background: var(--ceiling-black);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+      border-top: 1px solid var(--matte-gold);
+    }
+    .hours-flex {
+      margin-top: 30px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    /* --- MOBILE STYLES (< 900px) --- */
+    @media (max-width: 900px) {
+      .hamburger { display: flex; }
+      
+      nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        background: #111;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s ease;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+      }
+
+      nav a {
+        margin: 20px 0;
+        font-size: 18px;
+        width: 100%;
+        text-align: center;
+      }
+
+      #menu-toggle:checked ~ nav { right: 0; }
+      
+      /* Visual "X" for hamburger when menu is open */
+      #menu-toggle:checked ~ .hamburger span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+      #menu-toggle:checked ~ .hamburger span:nth-child(2) { opacity: 0; }
+      #menu-toggle:checked ~ .hamburger span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
+
+      .hero { grid-template-columns: 1fr; text-align: center; }
+      .hero-image { position: absolute; top:0; left:0; width:100%; height:100%; opacity: 0.3; z-index: 1; }
+      .hero-text { padding: 100px 20px; align-items: center; }
+      
+      .hours-flex { flex-direction: column; }
+      .hours-flex span { display: none; } /* hide separator | */
+    }
+
+    /* UTILITY */
+    .btn-gold {
+      display: inline-block;
+      padding: 18px 35px;
+      background: var(--gold-gradient);
+      color: black;
+      text-decoration: none;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: 2px;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">WINFIT</a>
+      
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav>
+        <a href="#about">Philosophy</a>
+        <a href="#location">Klang Location</a>
+        <a href="#membership">Membership</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <p style="color:var(--matte-gold); letter-spacing:4px; font-weight:700; margin-bottom:15px; font-size:12px;">WIN FITNESS FACTORY</p>
+        <h1>Define <span>Elite</span></h1>
+        <p style="color: #aaa; font-size: 16px; margin: 20px 0 30px; line-height: 1.6; max-width: 500px;">
+          Experience the pinnacle of strength in Klang. World-class red-line machinery meets a refined gold-standard atmosphere.
+        </p>
+        <a href="#membership" class="btn-gold">Request Access</a>
+      </div>
+      <div class="hero-image"></div>
+    </section>
+
+    <section class="features" id="about">
+      <h2 class="section-title">The WINFIT Standard</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Red-Line Tech</h3>
+          <p>Biomechanical equipment finished in high-gloss red for maximum focus and peak performance.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Gilded Sanctuary</h3>
+          <p>White-walled architectural design paired with gold accents to elevate your mental state.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Obsidian Peak</h3>
+          <p>Blacked-out industrial ceilings create an infinite headspace for heavy sessions.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="location-section" id="location">
+      <div class="location-content">
+        <span style="color:var(--matte-gold); letter-spacing:5px; text-transform:uppercase; font-size:12px;">Klang, Selangor</span>
+        <h2 style="font-family:'Playfair Display', serif; font-size: clamp(32px, 6vw, 48px); margin: 10px 0;">Win Fitness Factory</h2>
+        <p style="font-size: 18px; color: #888;">Botanic Capital, Bandar Botanic, 41200 Klang</p>
+        
+        <div class="hours-flex">
+          <div>MON - FRI: 8AM - 11PM</div>
+          <span style="color:var(--matte-gold)">|</span>
+          <div>SAT - SUN: 9AM - 8PM</div>
+        </div>
+        <br>
+        <a href="#" target="_blank" class="btn-gold">View on Map</a>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding: 50px 20px; text-align: center; background: #fff; border-top: 1px solid #eee;">
+    <div style="font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: #000;">WINFIT KLANG</div>
+    <p style="font-size: 10px; letter-spacing: 2px; color: #999; margin: 15px 0;">STRENGTH • PRECISION • LEGACY</p>
+    <div style="font-size: 10px; color: #ccc;">
+      © 2026 WIN FITNESS FACTORY.
+    </div>
+  </footer>
+
+</body>
+</html>
