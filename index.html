@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Win Fitness Factory | Best Gym in Klang | Virtual Training & Automated Personalization</title>
+    <meta name="description" content="Win Fitness Factory - Klang's premier luxury gym featuring agentic SEO training, automated personalization, hybrid office-gym space. Expert trainers, 24/7 access, premium equipment.">
+    <meta name="keywords" content="gym Klang, fitness center, personal training, Win Fitness Factory, automatic SEO training, AEO optimization, virtual gym, Klang Barat, Kelana Jaya">
+    
+    <!-- AEO/LEO SEO Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "GymOrTrainingFacility",
+        "name": "Win Fitness Factory",
+        "image": "https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1200",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Kelana Jaya",
+            "addressLocality": "Klang",
+            "addressRegion": "Selangor",
+            "addressCountry": "MY"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "3.045",
+            "longitude": "101.458"
+        },
+        "url": "https://share.google/9Hpfy7utQCEvts3X0",
+        "telephone": "+60121123456",
+        "priceRange": "$$$",
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "05:00",
+            "closes": "23:00"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "284"
+        }
+    }
+    </script>
+
+    <!-- Open Graph for Social -->
+    <meta property="og:title" content="Win Fitness Factory | Best Gym in Klang">
+    <meta property="og:description" content="Virtual gym experience meets automated SEO-driven training. Transform your digital presence and physical strength.">
+    <meta property="og:type" content="business.business">
+    <meta property="og:url" content="https://winfitnessfactory.com">
+    <meta property="business:contact_data:locality" content="Klang">
+    <meta property="business:contact_data:region" content="Selangor">
+    <meta property="business:contact_data:country_code" content="MY">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Oswald', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0a0a0a',
+                            accent: '#00d4ff',
+                            gold: '#ffd700',
+                            purple: '#6d28d9',
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .text-gradient {
+            background: linear-gradient(135deg, #00d4ff 0%, #6d28d9 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .text-gradient-gold {
+            background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        
+        .virtual-pattern {
+            background-image: radial-gradient(circle at 2px 2px, rgba(0,212,255,0.15) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        
+        .scroll-trigger {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        
+        .scroll-trigger.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        .seo-badge {
+            background: linear-gradient(90deg, rgba(0,212,255,0.1) 0%, rgba(109,40,217,0.1) 100%);
+            border-left: 3px solid #00d4ff;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00d4ff;
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-white font-sans overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 glass-effect border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-brand-accent to-brand-purple rounded-lg flex items-center justify-center">
+                        <i class="fas fa-dumbbell text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-display text-2xl font-bold tracking-wider">WIN <span class="text-brand-accent">FITNESS</span></h1>
+                        <p class="text-xs text-gray-400 tracking-widest uppercase">Factory • Virtual • Elite</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-sm font-medium hover:text-brand-accent transition-colors">Home</a>
+                    <a href="#virtual" class="text-sm font-medium hover:text-brand-accent transition-colors">Virtual Gym</a>
+                    <a href="#services" class="text-sm font-medium hover:text-brand-accent transition-colors">Services</a>
+                    <a href="#seo" class="text-sm font-medium hover:text-brand-accent transition-colors">Agentic SEO</a>
+                    <a href="#about" class="text-sm font-medium hover:text-brand-accent transition-colors">AOE Optimization</a>
+                    <a href="#contact" class="px-6 py-2 bg-gradient-to-r from-brand-accent to-brand-purple rounded-full font-semibold text-sm hover:shadow-[0_0_20px_rgba(0,212,255,0.5)] transition-all">
+                        Join Now
+                    </a>
+                </div>
+                
+                <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden glass-effect border-t border-white/10">
+            <div class="px-4 pt-2 pb-6 space-y-2">
+                <a href="#home" class="block px-3 py-2 text-base font-medium hover:text-brand-accent">Home</a>
+                <a href="#virtual" class="block px-3 py-2 text-base font-medium hover:text-brand-accent">Virtual Gym</a>
+                <a href="#services" class="block px-3 py-2 text-base font-medium hover:text-brand-accent">Services</a>
+                <a href="#seo" class="block px-3 py-2 text-base font-medium hover:text-brand-accent">Agentic SEO</a>
+                <a href="#contact" class="block px-3 py-2 text-base font-medium text-brand-accent">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+        <div class="absolute inset-0 virtual-pattern opacity-30"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="space-y-8 animate-fade-in">
+                    <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass-effect border border-brand-accent/30">
+                        <span class="w-2 h-2 bg-brand-accent rounded-full animate-pulse"></span>
+                        <span class="text-sm font-medium text-brand-accent">Now Open in Klang • 24/7 Virtual Access</span>
+                    </div>
+                    
+                    <h1 class="font-display text-5xl md:text-7xl font-bold leading-tight">
+                        FORGE YOUR <br>
+                        <span class="text-gradient">DIGITAL LEGACY</span>
+                    </h1>
+                    
+                    <p class="text-xl text-gray-300 max-w-lg leading-relaxed">
+                        Experience the future of fitness. Win Fitness Factory combines 
+                        <span class="text-brand-accent font-semibold">Agentic SEO training</span> 
+                        with a <span class="text-brand-gold font-semibold">luxury virtual gym</span> environment. 
+                        Where automated AI coaching meets elite physical performance.
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#contact" class="px-8 py-4 bg-gradient-to-r from-brand-accent to-brand-purple rounded-full font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-brand-accent/25 flex items-center gap-2">
+                            <i class="fas fa-rocket"></i>
+                            Start Transformation
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="px-8 py-4 glass-effect border border-white/20 rounded-full font-bold text-lg hover:bg-white/10 transition-all flex items-center gap-2">
+                            <i class="fab fa-instagram text-pink-500"></i>
+                            View Workouts
+                        </a>
+                    </div>
+                    
+                    <div class="flex items-center gap-6 pt-4">
+                        <div class="flex -space-x-3">
+                            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=100&h=100&fit=crop" class="w-10 h-10 rounded-full border-2 border-brand-dark" alt="Member">
+                            <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=100&h=100&fit=crop" class="w-10 h-10 rounded-full border-2 border-brand-dark" alt="Member">
+                            <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?w=100&h=100&fit=crop" class="w-10 h-10 rounded-full border-2 border-brand-dark" alt="Member">
+                            <div class="w-10 h-10 rounded-full border-2 border-brand-dark bg-brand-accent flex items-center justify-center text-xs font-bold">+2k</div>
+                        </div>
+                        <p class="text-sm text-gray-400">
+                            <span class="text-white font-bold">2,000+</span> members optimized their SEO ranking and physique
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="relative hidden lg:block">
+                    <div class="absolute inset-0 bg-gradient-to-r from-brand-accent to-brand-purple rounded-3xl blur-3xl opacity-20 animate-pulse-slow"></div>
+                    <div class="relative glass-effect rounded-3xl p-2 border border-white/10 shadow-2xl transform hover:scale-[1.02] transition-transform duration-500">
+                        <img src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                             alt="Luxury Virtual Gym Training" 
+                             class="rounded-2xl w-full object-cover h-[600px]">
+                        <div class="absolute bottom-6 left-6 right-6 glass-effect p-4 rounded-xl border border-white/10">
+                            <div class="flex items-center justify-between">
+                                <div>
+                                    <p class="text-xs text-brand-accent font-semibold uppercase tracking-wider">Live AI Coaching</p>
+                                    <p class="text-white font-bold">Virtual Training Session #4292</p>
+                                </div>
+                                <div class="w-12 h-12 bg-brand-accent rounded-full flex items-center justify-center animate-pulse">
+                                    <i class="fas fa-play text-black"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating Stats Cards -->
+                    <div class="absolute -left-12 top-20 glass-effect p-4 rounded-xl border border-white/10 animate-float shadow-xl">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center text-green-400">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400">SEO Authority</p>
+                                <p class="text-lg font-bold text-white">98/100</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="absolute -right-4 bottom-32 glass-effect p-4 rounded-xl border border-white/10 animate-float shadow-xl" style="animation-delay: 1s;">
+                        <div class="flex items-center gap-3">
+                            <div class="w-10 h-10 bg-yellow-500/20 rounded-lg flex items-center justify-center text-yellow-400">
+                                <i class="fas fa-crown"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-400">LEVO Certified</p>
+                                <p class="text-lg font-bold text-white">AEO Ready</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i class="fas fa-chevron-down text-2xl text-gray-400"></i>
+        </div>
+    </section>
+
+    <!-- SEO/Agentic Features Bar -->
+    <section id="seo" class="py-8 bg-gradient-to-r from-brand-dark via-brand-purple/20 to-brand-dark border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="space-y-2">
+                    <i class="fas fa-robot text-3xl text-brand-accent mb-2"></i>
+                    <p class="text-sm font-bold uppercase tracking-wider">Agentic SEO</p>
+                    <p class="text-xs text-gray-400">Automated Optimization</p>
+                </div>
+                <div class="space-y-2">
+                    <i class="fas fa-search text-3xl text-brand-gold mb-2"></i>
+                    <p class="text-sm font-bold uppercase tracking-wider">AEO Ready</p>
+                    <p class="text-xs text-gray-400">Answer Engine Optimized</p>
+                </div>
+                <div class="space-y-2">
+                    <i class="fas fa-map-marker-alt text-3xl text-brand-accent mb-2"></i>
+                    <p class="text-sm font-bold uppercase tracking-wider">LEO SEO</p>
+                    <p class="text-xs text-gray-400">Local Engine Optimization</p>
+                </div>
+                <div class="space-y-2">
+                    <i class="fas fa-vr-cardboard text-3xl text-brand-gold mb-2"></i>
+                    <p class="text-sm font-bold uppercase tracking-wider">SEVO</p>
+                    <p class="text-xs text-gray-400">Search Engine Virtual</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virtual Gym Concept -->
+    <section id="virtual" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-b from-brand-dark to-gray-900"></div>
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-purple/5 skew-x-12"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 scroll-trigger">
+                <span class="text-brand-accent font-semibold tracking-widest uppercase text-sm">The Future is Here</span>
+                <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 mb-6">
+                    Virtual Gym <span class="text-gradient-gold">+ Office</span> Hybrid
+                </h2>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                    Work, exercise, and optimize your digital presence in our state-of-the-art virtual facility. 
+                    Experience the intersection of physical excellence and SEO mastery.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="scroll-trigger group">
+                    <div class="relative overflow-hidden rounded-2xl mb-4">
+                        <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?w=600" 
+                             alt="Futuristic Gym Equipment" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-60"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="px-3 py-1 bg-brand-accent/20 border border-brand-accent/50 rounded-full text-xs text-brand-accent font-bold">
+                                AGENTIC TECH
+                            </span>
+                        </div>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-2 group-hover:text-brand-accent transition-colors">
+                        AI-Powered Training Protocols
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Our agentic SEO systems analyze your performance metrics to generate 
+                        personalized workouts optimized for maximum muscle engagement and recovery.
+                    </p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="scroll-trigger group" style="transition-delay: 100ms;">
+                    <div class="relative overflow-hidden rounded-2xl mb-4">
+                        <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=600" 
+                             alt="Virtual Office Space" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-60"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="px-3 py-1 bg-brand-gold/20 border border-brand-gold/50 rounded-full text-xs text-brand-gold font-bold">
+                                VIRTUAL OFFICE
+                            </span>
+                        </div>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-2 group-hover:text-brand-gold transition-colors">
+                        SEO Command Center
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Dedicated workstations with high-speed fiber for digital entrepreneurs. 
+                        Work on your SEO campaigns while maintaining peak physical condition.
+                    </p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="scroll-trigger group" style="transition-delay: 200ms;">
+                    <div class="relative overflow-hidden rounded-2xl mb-4">
+                        <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=600" 
+                             alt="Hybrid Training" 
+                             class="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-brand-dark to-transparent opacity-60"></div>
+                        <div class="absolute bottom-4 left-4">
+                            <span class="px-3 py-1 bg-purple-500/20 border border-purple-500/50 rounded-full text-xs text-purple-400 font-bold">
+                                AEO OPTIMIZED
+                            </span>
+                        </div>
+                    </div>
+                    <h3 class="font-display text-xl font-bold mb-2 group-hover:text-purple-400 transition-colors">
+                        LEVO + SEVO Integration
+                    </h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Local Engine Optimization meets Search Engine Virtual Optimization. 
+                        Dominate local Klang searches while ranking high in featured snippets.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-gray-900/50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="scroll-trigger">
+                    <span class="text-brand-accent font-semibold tracking-widest uppercase text-sm">Elite Services</span>
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mt-4 mb-6">
+                        Optimize Your <br>
+                        <span class="text-gradient">Physical & Digital</span> Presence
+                    </h2>
+                    
+                    <div class="space-y-6 mt-8">
+                        <div class="flex gap-4 seo-badge p-4 rounded-r-xl hover:bg-white/5 transition-colors cursor-pointer group">
+                            <div class="w-12 h-12 bg-brand-accent/10 rounded-lg flex items-center justify-center text-brand-accent text-xl group-hover:bg-brand-accent group-hover:text-black transition-all">
+                                <i class="fas fa-dumbbell"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Win Strength Training</h3>
+                                <p class="text-gray-400 text-sm">Elite resistance training programs with SEO-optimized progress tracking via our AEO dashboard.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4 seo-badge p-4 rounded-r-xl hover:bg-white/5 transition-colors cursor-pointer group">
+                            <div class="w-12 h-12 bg-brand-gold/10 rounded-lg flex items-center justify-center text-brand-gold text-xl group-hover:bg-brand-gold group-hover:text-black transition-all">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">Agentic Personalization</h3>
+                                <p class="text-gray-400 text-sm">AI-driven workout generation that adapts to your biometrics in real-time. Fully automated SEO-optimized fitness plans.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex gap-4 seo-badge p-4 rounded-r-xl hover:bg-white/5 transition-colors cursor-pointer group">
+                            <div class="w-12 h-12 bg-purple-500/10 rounded-lg flex items-center justify-center text-purple-400 text-xl group-hover:bg-purple-500 group-hover:text-white transition-all">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg mb-1">SEO Co-working Suites</h3>
+                                <p class="text-gray-400 text-sm">Private offices with high-speed connections for digital marketing agencies and solo entrepreneurs.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative scroll-trigger">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-brand-accent to-brand-purple opacity-20 blur-2xl rounded-full"></div>
+                    <div class="relative grid grid-cols-2 gap-4">
+                        <div class="space-y-4 mt-8">
+                            <img src="https://images.unsplash.com/photo-1581009146145-b5ef050c149a?w=400" class="rounded-2xl shadow-2xl w-full h-48 object-cover" alt="Gym">
+                            <img src="https://images.unsplash.com/photo-1576678927484-cc907957088c?w=400" class="rounded-2xl shadow-2xl w-full h-64 object-cover" alt="Training">
+                        </div>
+                        <div class="space-y-4">
+                            <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?w=400" class="rounded-2xl shadow-2xl w-full h-64 object-cover" alt="Equipment">
+                            <img src="https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=400" class="rounded-2xl shadow-2xl w-full h-48 object-cover" alt="Office">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-20 bg-gradient-to-r from-brand-accent/10 to-brand-purple/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="scroll-trigger">
+                    <div class="text-4xl md:text-5xl font-display font-bold text-brand-accent mb-2 counter" data-target="2000">0</div>
+                    <p class="text-sm text-gray-400 uppercase tracking-wider">Members Optimized</p>
+                </div>
+                <div class="scroll-trigger" style="transition-delay: 100ms;">
+                    <div class="text-4xl md:text-5xl font-display font-bold text-brand-gold mb-2 counter" data-target="98">0</div>
+                    <p class="text-sm text-gray-400 uppercase tracking-wider">SEO Success Rate %</p>
+                </div>
+                <div class="scroll-trigger" style="transition-delay: 200ms;">
+                    <div class="text-4xl md:text-5xl font-display font-bold text-brand-accent mb-2 counter" data-target="24">0</div>
+                    <p class="text-sm text-gray-400 uppercase tracking-wider">Hour Access</p>
+                </div>
+                <div class="scroll-trigger" style="transition-delay: 300ms;">
+                    <div class="text-4xl md:text-5xl font-display font-bold text-brand-gold mb-2 counter" data-target="150">0</div>
+                    <p class="text-sm text-gray-400 uppercase tracking-wider">ELoV Score</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 virtual-pattern opacity-20"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <h2 class="font-display text-4xl font-bold text-center mb-16 scroll-trigger">Client <span class="text-gradient">Transformations</span></h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="scroll-trigger glass-effect p-8 rounded-2xl border border-white/10 hover:border-brand-accent/50 transition-all duration-300 hover:transform hover:-translate-y-2">
+                    <div class="flex items-center gap-1 text-brand-gold mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"Not only did I lose 20kg using their agentic training protocols, but my business ranking jumped to #1 on Google Maps. The virtual gym concept is revolutionary."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" class="w-12 h-12 rounded-full object-cover" alt="Client">
+                        <div>
+                            <p class="font-bold">Ahmad Fauzi</p>
+                            <p class="text-sm text-gray-400">Entrepreneur, Klang</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-trigger glass-effect p-8 rounded-2xl border border-white/10 hover:border-brand-accent/50 transition-all duration-300 hover:transform hover:-translate-y-2" style="transition-delay: 100ms;">
+                    <div class="flex items-center gap-1 text-brand-gold mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"The hybrid office-gym model changed my life. I can optimize my SEO campaigns in their command center between HIIT sessions. Best AEO optimized facility in Malaysia."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop" class="w-12 h-12 rounded-full object-cover" alt="Client">
+                        <div>
+                            <p class="font-bold">Sarah Lim</p>
+                            <p class="text-sm text-gray-400">Digital Marketer</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-trigger glass-effect p-8 rounded-2xl border border-white/10 hover:border-brand-accent/50 transition-all duration-300 hover:transform hover:-translate-y-2" style="transition-delay: 200ms;">
+                    <div class="flex items-center gap-1 text-brand-gold mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 mb-6 italic">"Win Fitness Factory understands modern SEO trends. My personal branding presence has never been stronger. The staff treats you like elite talent, which builds confidence."</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop" class="w-12 h-12 rounded-full object-cover" alt="Client">
+                        <div>
+                            <p class="font-bold">Darren Yap</p>
+                            <p class="text-sm text-gray-400">Software Engineer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contact Section -->
+    <section id="contact" class="py-24 relative">
+        <div class="absolute inset-0 bg-gradient-to-t from-brand-purple/20 to-transparent"></div>
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="glass-effect rounded-3xl p-8 md:p-16 border border-white/10 text-center">
+                <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">
+                    Ready to Dominate <br>
+                    <span class="text-gradient">Physical & Digital Realms?</span>
+                </h2>
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Join Win Fitness Factory today and optimize both your body and business presence. 
+                    LEVO SEO ready for Klang's elite.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <a href="https://wa.me/60121123456" target="_blank" class="px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-green-500/50">
+                        <i class="fab fa-whatsapp text-xl"></i>
+                        WhatsApp Us
+                    </a>
+                    <a href="https://facebook.com/winflfitness" target="_blank" class="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-full font-bold text-lg transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-blue-600/50">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                        Facebook @winfitnessfactory
+                    </a>
+                </div>
+                
+                <div class="grid md:grid-cols-3 gap-6 text-left mt-12">
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-white/5">
+                        <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent flex-shrink-0">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm">Instagram</p>
+                            <p class="text-gray-400 text-sm">@winfitnessfactory</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-white/5">
+                        <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent flex-shrink-0">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm">Location</p>
+                            <p class="text-gray-400 text-sm">Kelana Jaya, Klang • Malaysia</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 rounded-xl bg-white/5">
+                        <div class="w-10 h-10 rounded-full bg-brand-accent/20 flex items-center justify-center text-brand-accent flex-shrink-0">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm">Hours</p>
+                            <p class="text-gray-400 text-sm">Open 5AM - 11PM Daily</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section for AEO -->
+    <section class="py-20 bg-gray-900/30">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h3 class="font-display text-3xl font-bold text-center mb-12">Frequently Asked Questions <span class="text-brand-accent">(AEO Optimized)</span></h3>
+            
+            <div class="space-y-4" id="faq-container">
+                <div class="glass-effect rounded-xl overflow-hidden border border-white/10">
+                    <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center hover:bg-white/5 transition-colors">
+                        <span class="font-bold">What is Agentic SEO and how does it relate to fitness?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-400">
+                        Agentic SEO is an automated, AI-driven approach to search engine optimization. At Win Fitness Factory, our Agentic systems automatically optimize your personal training schedule and digital footprints simultaneously, creating a synergistic effect between physical fitness and online visibility.
+                    </div>
+                </div>
+                
+                <div class="glass-effect rounded-xl overflow-hidden border border-white/10">
+                    <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center hover:bg-white/5 transition-colors">
+                        <span class="font-bold">Is Win Fitness Factory suitable for digital nomads and remote workers?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-400">
+                        Absolutely. Our LEVO optimized coworking spaces are specifically designed for professionals who need to maintain physical excellence while managing digital marketing campaigns and business operations.
+                    </div>
+                </div>
+                
+                <div class="glass-effect rounded-xl overflow-hidden border border-white/10">
+                    <button class="faq-btn w-full px-6 py-4 text-left flex justify-between items-center hover:bg-white/5 transition-colors">
+                        <span class="font-bold">What makes Win Fitness Factory the best gym in Klang?</span>
+                        <i class="fas fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div class="faq-content hidden px-6 pb-4 text-gray-400">
+                        We combine luxury amenities with advanced SEO-tracking fitness metrics. Using AEO (Answer Engine Optimization) principles, we ensure our members rank higher in both search results and physical competitions.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black border-t border-white/10 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-8 h-8 bg-gradient-to-br from-brand-accent to-brand-purple rounded flex items-center justify-center">
+                            <i class="fas fa-dumbbell text-white text-sm"></i>
+                        </div>
+                        <h3 class="font-display text-2xl font-bold">WIN <span class="text-brand-accent">FITNESS</span></h3>
+                    </div>
+                    <p class="text-gray-400 mb-6 max-w-md">
+                        Klang's premier destination for Agentic SEO training and luxury virtual gym experiences. 
+                        Transform your physical and digital presence.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://instagram.com/winflfitness" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-pink-600 transition-colors">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://facebook.com/winflfitness" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-blue-600 transition-colors">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://wa.me/60121123456" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-green-500 transition-colors">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="https://share.google/9Hpfy7utQCEvts3X0" target="_blank" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-red-500 transition-colors" title="Google Maps">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4 text-brand-accent">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#virtual" class="hover:text-white transition-colors">Virtual Gym</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="#seo" class="hover:text-white transition-colors">SEO Features</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-bold mb-4 text-brand-accent">Business Info</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-map-marker-alt mt-1 text-brand-accent"></i>
+                            <span>M-12, Jalan Kelana-indah, 47301<br>Klang, Selangor, Malaysia</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-phone text-brand-accent"></i>
+                            <span>+60 12-1123 4567</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-envelope text-brand-accent"></i>
+                            <span>elite@winfitness.my</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i class="fas fa-clock text-brand-accent"></i>
+                            <span>Open 5:00 AM - 11:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-gray-500 text-sm">
+                    &copy; 2024 Win Fitness Factory. All rights reserved. SEO-Optimized & AEO Ready.
+                </p>
+                <div class="flex gap-6 text-sm text-gray-500">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+                    <a href="#" class="hover:text-white transition-colors">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/60121123456" target="_blank" class="whatsapp-float w-16 h-16 bg-green-500 rounded-full flex items-center justify-center text-white text-3xl shadow-lg hover:scale-110 transition-transform z-50" style="bottom: 100px; right: 30px;">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-black/90', 'backdrop-blur-md');
+                navbar.classList.remove('glass-effect');
+            } else {
+                navbar.classList.remove('bg-black/90', 'backdrop-blur-md');
+                navbar.classList.add('glass-effect');
+            }
+        });
+
+        // Scroll Trigger Animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    if (entry.target.classList.contains('counter')) {
+                        animateCounter(entry.target);
+                    }
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-trigger, .counter').forEach((el) => observer.observe(el));
+
+        // Counter Animation
+        function animateCounter(el) {
+            const target = parseInt(el.getAttribute('data-target'));
+            const duration = 2000;
+            const step = target / (duration / 16);
+            let current = 0;
+            
+            const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                    el.textContent = target + (el.parentElement.textContent.includes('%') ? '%' : target > 100 ? '+' : '');
+                    clearInterval(timer);
+                } else {
+                    el.textContent = Math.floor(current);
+                }
+            }, 16);
+            el.classList.remove('counter');
+        }
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                const icon = button.querySelector('i');
+                
+                content.classList.toggle('hidden');
+                icon.style.transform = content.classList.contains('hidden') ? 'rotate(0deg)' : 'rotate(180deg)';
+            });
+        });
+
+        // Smooth Scroll for Anchor Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Close mobile menu if open
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
